@@ -1,0 +1,48 @@
+# Secrets — never commit
+.env
+*.env
+!config/example.env
+secrets.env
+**/secrets.env
+data/config.yaml
+data/profile.json
+data/accounts.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env/
+.Python
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Runtime outputs
+data/Input/
+data/Output/
+data/Resume/
+data/applications/
+data/browser_state/
+data/staging/
+*.log
+*.aux
+*.out
+*.synctex.gz
+~$*
+
+# CapSolver / browser caches
+.playwright/
+browser_state/
+
+_refs/
+BUILD_PROMPT.md
+claude-build.log
+*.tgz

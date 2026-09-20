@@ -1,0 +1,71 @@
+# Company exclude list — one company name (or substring) per line.
+# One per line. Case-insensitive substring match ("Google" also kills "Google DeepMind").
+# Lines starting with # are ignored. Do not expand without an explicit ask.
+Meta
+Facebook
+Apple
+Netflix
+Google
+Alphabet
+Amazon
+Microsoft
+Nvidia
+Tesla
+Oracle
+Salesforce
+Adobe
+IBM
+Intel
+Cisco
+Uber
+Airbnb
+LinkedIn
+ByteDance
+TikTok
+McKinsey
+Bain
+BCG
+Boston Consulting
+Deloitte
+PwC
+Pricewaterhouse
+EY
+Ernst & Young
+KPMG
+Accenture
+Capgemini
+Cognizant
+Infosys
+TCS
+Tata Consultancy
+Wipro
+Booz Allen
+Kearney
+Oliver Wyman
+Insight Global
+TEKsystems
+Aerotek
+Apex Systems
+Randstad
+Adecco
+Manpower
+Kelly Services
+Robert Half
+Kforce
+CyberCoders
+Collabera
+Actalent
+Eliassen
+Motion Recruitment
+Hays
+Michael Page
+Allegis
+Modis
+Aquent
+Yoh
+Beacon Hill
+Creative Circle
+Aston Carter
+Lucas Group
+Fortune Staffing
+Dice

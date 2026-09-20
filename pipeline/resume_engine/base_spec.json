@@ -1,0 +1,137 @@
+{
+  "title": "AI/ML Support Engineer",
+  "objective": "AI/ML Support Engineer with half a decade of experience developing, deploying, troubleshooting, and supporting production machine learning and Generative AI systems on Google Cloud (Vertex AI, Gemini, Dialogflow), AWS, and Azure. Strong foundation in compute fundamentals (Linux, virtualization, Docker/Kubernetes), deep learning frameworks (PyTorch, TensorFlow, JAX), and LLM/RAG architectures, with a proven record of diagnosing and resolving complex model, data pipeline, and infrastructure issues, optimizing model performance, and serving as the technical escalation point for AI/ML platform users across travel, healthcare, finance, and e-commerce domains.",
+  "profile": [
+    {
+      "label": "Troubleshooting & Diagnosis",
+      "text": "Half a decade of troubleshooting, diagnosing, and resolving complex issues across the AI/ML stack — data pipeline failures, training and inference errors, CUDA/OOM faults, model drift, latency regressions, and LLM hallucination/grounding defects — using structured root-cause analysis, log and trace correlation, and reproducible test cases."
+    },
+    {
+      "label": "Support Methodology",
+      "text": "Serve as technical SME and escalation point for internal and customer-facing AI systems; manage issues through the full case lifecycle (triage, reproduce, diagnose, fix or workaround, validate, close) with clear RCAs, runbooks, and knowledge-base articles that prevent recurrence and reduce repeat tickets."
+    },
+    {
+      "label": "Code Reading & Debugging",
+      "text": "Read, trace, and debug code in Python, JavaScript/TypeScript, Shell, SQL, and C++ across ML training scripts, inference services, API layers, and CI/CD pipelines; review system designs to identify reliability and scalability gaps."
+    },
+    {
+      "label": "Compute Fundamentals",
+      "text": "Deep understanding of virtualization, containerization, and operating systems — Linux/Windows system administration, Docker image builds and hardening, Kubernetes cluster setup, upgrades, and troubleshooting (GKE, AKS, and bare metal), networking (CNI), storage (CSI), ingress, and GPU/resource scheduling."
+    },
+    {
+      "label": "Google Cloud AI/ML",
+      "text": "Hands-on with Vertex AI (custom training, managed endpoints for online/batch prediction, Vertex AI Pipelines, Model Registry, evaluation), Gemini models via the Gemini API and Vertex AI, Dialogflow CX conversational agents, GKE, Cloud Run, Cloud Functions, BigQuery, Cloud Storage, IAM, and Cloud Logging/Monitoring for model observability."
+    },
+    {
+      "label": "Multi-Cloud Platforms",
+      "text": "Proficient on AWS (SageMaker, Bedrock, EC2, Lambda, ECS/EKS, S3, Step Functions) and Azure (Azure OpenAI, AI Foundry, AI Search, AKS, Key Vault, Application Insights); builds and supports infrastructure for training, serving, and monitoring AI models."
+    },
+    {
+      "label": "Generative AI & LLMs",
+      "text": "Designs, deploys, and supports LLM applications — RAG pipelines, multi-agent workflows, prompt engineering, fine-tuning (LoRA/PEFT), evaluation (groundedness, relevance, coherence), and guardrails — using Gemini, GPT-4o, Claude, LLaMA, and open-source models from Hugging Face."
+    },
+    {
+      "label": "ML Development & Deployment",
+      "text": "Develops and deploys models across supervised learning, time-series forecasting, NLP, computer vision, and deep learning (CNN, RNN/LSTM, Transformers) with PyTorch, TensorFlow, Keras, JAX, and scikit-learn; serves them via Vertex AI endpoints, ONNX Runtime, TorchServe, TensorFlow Serving, and FastAPI microservices."
+    },
+    {
+      "label": "Model Architectures & Accelerators",
+      "text": "Strong command of encoder, decoder, and encoder-decoder transformer architectures (BERT, T5, GPT, LLaMA), diffusion models, GANs, VAEs, and autoencoders; trains and optimizes on NVIDIA GPUs (CUDA, mixed precision, quantization) and TPUs, scaling workloads with Ray and distributed training."
+    },
+    {
+      "label": "Machine Learning APIs",
+      "text": "Integrates and troubleshoots ML APIs — Gemini/Vertex AI, OpenAI, Anthropic Claude, Azure OpenAI, Cohere, Hugging Face Inference — resolving authentication, quota and rate-limit errors, timeouts, streaming issues, and version/deprecation migrations (e.g., PaLM to Gemini)."
+    },
+    {
+      "label": "Data Pipelines & Analysis",
+      "text": "Builds and debugs data pipelines with Pandas, NumPy, PySpark, Dask, SQL, Airflow, and Prefect; performs data-quality analysis, feature engineering, and error-pattern analytics to isolate the root cause of model degradation."
+    },
+    {
+      "label": "MLOps & Observability",
+      "text": "Implements CI/CD (GitHub Actions, Jenkins) and IaC (Bicep), experiment tracking (MLflow, Weights & Biases, TensorBoard), and production monitoring and drift detection with OpenTelemetry, Grafana, Application Insights, and Cloud Monitoring; automates retraining and rollback."
+    },
+    {
+      "label": "Semantic Search & Vector Databases",
+      "text": "Designs and tunes retrieval systems with FAISS, Pinecone, Weaviate, Chroma, Qdrant, and Azure AI Search (vector + BM25 hybrid with reranking) to support RAG pipelines at scale."
+    },
+    {
+      "label": "Collaboration & Communication",
+      "text": "Writes clear customer-facing RCAs and internal postmortems, mentors junior engineers, and partners with product, engineering, and customer teams to turn recurring issues into durable platform improvements."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Compute & Systems",
+      "items": "Linux (Ubuntu/RHEL), Windows, Bash/Shell scripting, Virtualization (VMs, Compute Engine, EC2), Docker, Kubernetes (GKE, AKS, EKS, bare metal), Helm, Ingress, CNI/CSI, Networking, Storage, System Administration"
+    },
+    {
+      "category": "Google Cloud",
+      "items": "Vertex AI (Training, Endpoints, Pipelines, Model Registry, Workbench), Gemini API, Dialogflow CX, GKE, Cloud Run, Cloud Functions, BigQuery, Cloud Storage, Pub/Sub, IAM, Cloud Logging & Monitoring"
+    },
+    {
+      "category": "AWS & Azure",
+      "items": "AWS (SageMaker, Bedrock, EC2, Lambda, ECS Fargate, EKS, S3, Step Functions, SQS, CloudWatch); Azure (Azure OpenAI, AI Foundry, AI Search, AI Content Safety, Bot Framework, AKS, Key Vault, Entra ID, Application Insights, Bicep)"
+    },
+    {
+      "category": "Generative AI & LLMs",
+      "items": "Gemini, GPT-4o, Claude, LLaMA, Hugging Face Transformers, RAG, LangChain, LangGraph, CrewAI, Google ADK, MCP, Prompt Engineering, Fine-tuning (LoRA/PEFT), LLM Evaluation & Guardrails (Presidio, LLM Guard), Stable Diffusion, CLIP, DALL·E"
+    },
+    {
+      "category": "ML/DL Frameworks & Accelerators",
+      "items": "PyTorch, TensorFlow, Keras, JAX, Ray, scikit-learn, ONNX Runtime, TorchServe, TensorFlow Serving; NVIDIA GPUs (CUDA, mixed precision), TPUs"
+    },
+    {
+      "category": "Model Architectures",
+      "items": "Transformers (encoder / decoder / encoder-decoder: BERT, T5, GPT, LLaMA), CNN, RNN/LSTM, GANs, VAEs, Autoencoders, Diffusion Models"
+    },
+    {
+      "category": "Data & Pipelines",
+      "items": "Pandas, NumPy, Polars, Dask, PySpark/Spark, Hadoop, Hive, SQL (PostgreSQL, SQL Server), BigQuery, Snowflake, Redis, Airflow, Prefect, ETL"
+    },
+    {
+      "category": "Vector Databases & Search",
+      "items": "FAISS, Pinecone, Weaviate, Chroma, Qdrant, Azure AI Search (hybrid vector + BM25, semantic reranking)"
+    },
+    {
+      "category": "MLOps, DevOps & Observability",
+      "items": "MLflow, Weights & Biases, TensorBoard, Databricks, GitHub Actions, Jenkins, CI/CD, Bicep IaC, OpenTelemetry, Grafana, Langfuse, Application Insights, SAST/DAST"
+    },
+    {
+      "category": "Languages, APIs & Frontend",
+      "items": "Python, JavaScript/TypeScript (Node.js, React, Angular), Bash, SQL, C++, R; FastAPI, Flask, gRPC, REST, Streamlit"
+    },
+    {
+      "category": "Support & Troubleshooting",
+      "items": "Root-Cause Analysis, Log/Trace Analysis, Incident Triage & Escalation, Case Lifecycle Management, Runbooks & KB Authoring, SLA Management, Jira, Agile/Scrum"
+    }
+  ],
+  "mondee_bullets": [
+    "Serve as technical SME and escalation point for production AI/ML platforms, troubleshooting, diagnosing, and resolving complex issues across data pipelines, model training, inference services, and cloud infrastructure; own cases through the full lifecycle — triage, reproduction, root-cause analysis, fix or workaround, validation, and RCA documentation.",
+    "Developed and supported GenAI-powered customer-support automation using LLM APIs (Gemini via Vertex AI, OpenAI GPT-4o), LangChain, FAISS, and Pinecone, improving response accuracy and significantly reducing manual workload; instrumented pipelines with tracing to quickly isolate retrieval versus generation failures.",
+    "Deployed and operated ML models on Vertex AI — custom training jobs, managed endpoints, and Vertex AI Pipelines with Model Registry versioning and automated evaluation; debugged training failures, endpoint deployment errors, IAM/quota issues, and latency and throughput regressions using Cloud Logging and Cloud Monitoring.",
+    "Built and troubleshot conversational agents with Dialogflow CX and Azure Bot Framework (Bot Emulator for debugging) for employee queries and customer interactions; diagnosed intent-matching, webhook fulfillment, and session-state issues.",
+    "Architected production-grade RAG pipelines on Azure AI Foundry, integrating Azure OpenAI (GPT-4o) with Azure AI Search hybrid retrieval (vector + BM25 + semantic reranker), improving groundedness by 35% and reducing hallucination-driven escalations by 40%.",
+    "Built multi-agent document intelligence workflows (Foundry Agent Service, prompt flow, LangGraph) that automate classification and schema-based extraction across 30+ enterprise document types, cutting manual review effort by ~60%.",
+    "Enforced enterprise AI guardrails — Azure AI Content Safety (prompt shields, groundedness detection) and Presidio PII redaction — and secured multi-tenant access with Entra ID, managed identities, and Key Vault to meet SOC 2/GDPR requirements.",
+    "Established end-to-end LLMOps: automated evaluation pipelines (groundedness, relevance, coherence), distributed tracing via OpenTelemetry/Application Insights, and CI/CD provisioning with Bicep IaC and GitHub Actions, reducing release cycles from days to hours.",
+    "Fine-tuned and deployed transformer models (GPT, BERT, T5) with Hugging Face Transformers and LoRA/PEFT on GPU infrastructure for feedback summarization, marketing content generation, and classification; resolved OOM errors, tokenizer mismatches, and convergence issues, and evaluated latency/cost trade-offs across model sizes.",
+    "Optimized production model performance by profiling inference (batching, quantization, ONNX Runtime, mixed precision) and tuning autoscaling on Kubernetes and Vertex AI endpoints to reduce p95 latency; monitored drift and model health with MLflow, Weights & Biases, and Grafana/Streamlit dashboards.",
+    "Deployed, managed, and troubleshot containerized workloads on Kubernetes (GKE, AKS, and Kubernetes on bare metal) — cluster setup and upgrades, CNI networking, CSI storage, ingress, resource limits, CrashLoopBackOff, image-pull, and DNS failures — ensuring high availability and fault tolerance.",
+    "Designed and deployed generative models (Stable Diffusion, GANs) to create synthetic imagery for packaging mockups and training-data augmentation; built computer vision pipelines with Azure Cognitive Services and OpenCV for image tagging, OCR, content moderation, and quality-control checks.",
+    "Built AI/ML-enabled software with Python (FastAPI/Flask microservices, asynchronous programming, REST/gRPC APIs) and TypeScript (React, Angular); integrated LLM applications with Pinecone, PostgreSQL, and Redis; read and debugged code across the stack to resolve integration defects.",
+    "Built agentic AI solutions with LangChain, LangGraph, CrewAI, Google Agent Development Kit (ADK), and MCP servers for tool-using assistants and system integrations; orchestrated workflows via Copilot Studio and n8n; power user of AI IDEs (GitHub Copilot, Cursor, Claude Code).",
+    "Engineered end-to-end ML pipelines across regression, time-series forecasting, and deep learning (CNN, RNN, LSTM) with PyTorch, TensorFlow, scikit-learn, and Spark/PySpark; orchestrated MLOps on Databricks with MLflow, Docker, and FastAPI; mentored junior engineers and guided cross-functional teams on AI governance, scalability, and enterprise adoption.",
+    "Operationalized deployment across Google Cloud, AWS, and Azure with Docker/Kubernetes and CI/CD (GitHub Actions, Jenkins); embedded SAST/DAST security gates, code reviews, automated testing, and documentation into an Agile/Scrum delivery cadence."
+  ],
+  "mondee_env": "Google Cloud (Vertex AI, Gemini API, Dialogflow CX, GKE, Cloud Run, BigQuery, Cloud Logging/Monitoring), Azure (AI Foundry, Azure OpenAI, AI Search, Content Safety, Bot Framework, AKS, Key Vault, Application Insights), AWS (SageMaker, Bedrock, EC2, Lambda, S3), Python, FastAPI, TypeScript/React/Angular, PyTorch, TensorFlow, Hugging Face, LangChain, LangGraph, CrewAI, ADK, MCP, Pinecone, FAISS, Qdrant, PostgreSQL, Redis, Docker, Kubernetes, GitHub Actions, Jenkins, MLflow, Weights & Biases, Grafana, OpenTelemetry, Databricks, Spark, Tableau, Jira, Agile/Scrum.",
+  "cosmic_bullets": [
+    "Built and supported document-processing pipelines that converted regulatory PDFs to structured XML and CSV using Python (PDFMiner, PyPDF2, PDFQuery, ElementTree, Unidecode), automating two-way transformations and resolving parsing edge cases such as malformed layouts and encoding errors reported by downstream users.",
+    "Developed and deployed NLP models for sentiment analysis, spam detection, and text mining over customer feedback and technical documentation using NLTK, scikit-learn, and SciPy; diagnosed data-quality and class-imbalance issues that degraded accuracy and retrained to restore performance.",
+    "Created predictive models for user behavior, social network structures, and manufacturing quality using Pandas, NumPy, and scikit-learn; applied feature engineering and hyperparameter tuning, and investigated and explained prediction anomalies for engineering teams.",
+    "Developed and optimized ML pipelines spanning regression, classification, clustering, time-series forecasting, and deep learning (CNN, RNN, LSTM) with PyTorch and TensorFlow; fine-tuned transformer models (BERT, GPT-2, T5) with Hugging Face and parameter-efficient adapters.",
+    "Deployed and managed containerized ML applications on AWS (EC2, S3, Kubernetes) with Docker; troubleshot deployment, networking, and scaling issues to maintain performance, scalability, and reliability.",
+    "Implemented MLOps on Databricks with MLflow, automating model deployment and lifecycle management via Docker, FastAPI, and serverless functions; built Streamlit and HTML/CSS/JavaScript front ends to expose model outputs.",
+    "Performed statistical analysis and visualization with R, Seaborn, and Matplotlib; processed big data with Hadoop, Hive, Spark, and PySpark; delivered Tableau dashboards to engineering and management teams."
+  ],
+  "cosmic_env": "Python, R, AWS (EC2, S3, Kubernetes), Docker, Databricks, MLflow, scikit-learn, NLTK, SciPy, PyTorch, TensorFlow, Hugging Face, Spark/PySpark, Hadoop, Hive, SQL Server, Tableau, Jupyter, Linux."
+}

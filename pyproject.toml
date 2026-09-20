@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automata-jobs"
+version = "1.0.0"
+description = "Automata — post-scrape job search automation: filter, tailor LaTeX resumes, apply with Playwright."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Bhanu Prakash Bathini" }]
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pypdf>=4.0.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.28.0",
+    "playwright>=1.40.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/Bhanubathini2002/automata"
+
+[project.scripts]
+automata = "pipeline.run:main"
+
+[tool.setuptools.packages.find]
+include = ["pipeline*", "ui*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

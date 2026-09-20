@@ -1,0 +1,107 @@
+{
+  "_comment": "Copy to data/profile.json and fill. Credentials come from .env, not here.",
+  "identity": {
+    "first_name": "Bhanu Prakash",
+    "last_name": "Bathini",
+    "preferred_first_name": "Bhanu",
+    "full_name": "Bhanu Prakash Bathini",
+    "email": "bhanu.bathiniofficial@gmail.com",
+    "phone_digits": "6605292536",
+    "phone_formatted": "(660) 529-2536",
+    "phone_e164": "+16605292536",
+    "linkedin": "https://www.linkedin.com/in/bhanu-prakash-1106151b5/",
+    "address_line1": "27222 Fulshear Bend Dr",
+    "address_line2": "",
+    "city": "Houston",
+    "state_full": "Texas",
+    "state_code": "TX",
+    "postal_code": "77441",
+    "country_full": "United States",
+    "country_code": "US",
+    "pronouns": "He/Him"
+  },
+  "work_auth": {
+    "authorized_to_work_us": "Yes",
+    "requires_sponsorship_now_or_future": "No",
+    "visa_status_plain": "F-1 OPT",
+    "is_us_citizen": null,
+    "has_green_card": null,
+    "security_clearance": null,
+    "_comment": "NEVER answer citizen/GC/clearance \u2014 fieldmap returns ABORT"
+  },
+  "eeo": {
+    "gender": "Male",
+    "hispanic_or_latino": "No",
+    "race": "Asian",
+    "veteran_status": "I am not a protected veteran",
+    "disability_status": "No, I do not have a disability and have not had one in the past",
+    "age_band": "Prefer not to say",
+    "sexual_orientation": "Prefer not to say",
+    "gender_identity": "Prefer not to say",
+    "lgbtq": "Prefer not to say"
+  },
+  "education": {
+    "school": "Northwest Missouri State University",
+    "school_with_country": "Northwest Missouri State University - US",
+    "degree_long": "Master of Science (MS)",
+    "degree_short": "Masters Degree",
+    "field_of_study": "Computer Science",
+    "major": "Applied Computer Science",
+    "gpa": "4.0",
+    "gpa_scale": "4.0",
+    "grad_month": "May",
+    "grad_year": "2023",
+    "degree_status": "Graduated",
+    "school_city_state": "Maryville, Missouri",
+    "school_country": "United States"
+  },
+  "employment": {
+    "current_employer": "Mondee",
+    "current_title": "AI Engineer",
+    "current_start_month": "01",
+    "current_start_year": "2023",
+    "is_current_employer": "Yes",
+    "prev_employer": "Cosmic Reality",
+    "prev_title": "AI/ML Engineer",
+    "prev_start": "04/2020",
+    "prev_end": "10/2022",
+    "years_total": "6",
+    "years_ai_ml": "4"
+  },
+  "compensation": {
+    "base_number": "120000",
+    "base_formatted": "$120,000",
+    "total_comp_formatted": "$140,000",
+    "range_text": "$120,000 - $140,000"
+  },
+  "standard_answers": {
+    "relocate": "Yes",
+    "travel": "Yes",
+    "remote_preference": "Remote",
+    "notice_period": "2 weeks",
+    "start_date_offset_days": 14,
+    "worked_here_before": "No",
+    "related_to_employee": "No",
+    "non_compete": "No",
+    "sms_consent": "Yes",
+    "how_did_you_hear": "Company Website",
+    "how_did_you_hear_fallbacks": [
+      "Career Site",
+      "Web/Internet",
+      "Job Board",
+      "Other"
+    ],
+    "na_text": "N/A",
+    "referral_source": "N/A"
+  },
+  "files": {
+    "resume": "",
+    "cover_letter": ""
+  },
+  "essays": {
+    "ai_project": "At Mondee I built RAG + reranker + LLM synthesis with a CI eval harness, improving groundedness by 35% and cutting hallucination escalations by 40%.",
+    "why_interested": "I am excited about this role because it aligns with my production GenAI experience shipping reliable LLM systems.",
+    "strengths": "Production AI/ML ownership across RAG, evaluation, and cloud platforms (GCP, AWS, Azure).",
+    "links": "Work is in private company repos. LinkedIn: https://www.linkedin.com/in/bhanu-prakash-1106151b5/"
+  }
+}
