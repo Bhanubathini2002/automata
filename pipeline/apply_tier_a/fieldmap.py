@@ -1,4 +1,4 @@
-"""Deterministic label → answer. Legal attestations → ABORT. Never invent answers."""
+"""Deterministic label -> answer. Legal attestations -> ABORT. Never invent answers."""
 from __future__ import annotations
 
 import datetime
@@ -55,6 +55,11 @@ def _g(*keys, default=""):
 
 
 RULES = [
+    (r"unrestricted work authorization|authorized to work (in the )?(united states|u\.?s\.?)",
+     _g("work_auth", "authorized_to_work_us", default="Yes")),
+    (r"require (employment-based )?visa sponsorship|require sponsorship|need sponsorship",
+     _g("work_auth", "requires_sponsorship_now_or_future", default="No")),
+
     (r"security clearance|clearance level|ts/sci|top secret|polygraph", ABORT),
     (r"are you a (u\.?s\.?|united states) citizen|citizenship status|permanent resident|green card", ABORT),
     (r"\bssn\b|social security|date of birth|\bdob\b", ABORT),
@@ -92,7 +97,7 @@ RULES = [
     (r"major|concentration", _g("education", "major")),
     (r"gpa|grade point", _g("education", "gpa")),
     (r"graduat", _g("education", "grad_year")),
-    (r"current employer|company name|employer name|most recent employer",
+    (r"current company|current employer|company name|employer name|most recent employer|present employer",
      _g("employment", "current_employer")),
     (r"current (job )?title|job title|position title|^title",
      _g("employment", "current_title")),

@@ -12,7 +12,7 @@ ENV_PATH = ROOT / ".env"
 
 
 def default_chrome_user_data_dir() -> Path:
-    """Durable Playwright/Chrome profile — one-time Gmail login persists here."""
+    """Durable Playwright/Chrome profile - one-time Gmail login persists here."""
     return DATA / "browser_state"
 
 
@@ -61,7 +61,7 @@ def save_dotenv(secrets: dict[str, str], path: Path | None = None) -> None:
     path = path or ENV_PATH
     existing = load_dotenv(path) if path.is_file() else {}
     existing.update({k: v for k, v in secrets.items() if v is not None})
-    lines = ["# Auto-written by Automata UI — do not commit\n"]
+    lines = ["# Auto-written by Automata UI - do not commit\n"]
     for k in sorted(existing):
         if existing[k] == "":
             continue

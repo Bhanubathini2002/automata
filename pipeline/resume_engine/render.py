@@ -1,7 +1,7 @@
 """
 LaTeX render hooks: escape, validate, fabricate guard, compile helpers.
 
-Resume/cover PDFs require xelatex/pdflatex. Missing compilers fail clearly —
+Resume/cover PDFs require xelatex/pdflatex. Missing compilers fail clearly -
 never silent-skip pretending a PDF exists.
 """
 from __future__ import annotations
@@ -59,7 +59,7 @@ def esc(s: str) -> str:
     ]:
         s = s.replace(a, b)
     s = s.replace("~", r"\textasciitilde{}").replace("^", r"\^{}")
-    s = s.replace("—", "---").replace("–", "--")
+    s = s.replace("-", "---").replace("-", "--")
     return s
 
 
@@ -139,7 +139,7 @@ def _candidate_dirs() -> list[Path]:
 
 
 def _find_engine(env_key: str, binary: str) -> str | None:
-    """Resolve a LaTeX engine via env → PATH → common install locations."""
+    """Resolve a LaTeX engine via env -> PATH -> common install locations."""
     env_val = (os.environ.get(env_key) or "").strip()
     if env_val and _is_executable(env_val):
         return env_val
@@ -295,7 +295,7 @@ def validate(spec, city_st) -> list:
     errs = []
     if city_st and not re.fullmatch(r"[A-Za-z .\-]+, [A-Z]{2}", city_st):
         if not re.search(r"remote", city_st or "", re.I):
-            errs.append(f"city_st must be 'City, ST' — got {city_st!r}")
+            errs.append(f"city_st must be 'City, ST' - got {city_st!r}")
     fab = find_fabrications(spec)
     if fab:
         errs.append("fabricated/blocked tech: " + ", ".join(fab))
@@ -319,7 +319,7 @@ def write_resume_tex(job_dir: str, spec: dict, city_st: str, template_tex: str |
         return path
 
     lines = [
-        r"% Auto-generated tailored resume body — compile with xelatex against your preamble",
+        r"% Auto-generated tailored resume body - compile with xelatex against your preamble",
         rf"% Title: {esc(spec['title'])} | {esc(city_st)}",
         r"\section*{Objective}",
         esc(spec["objective"]),
@@ -334,10 +334,10 @@ def write_resume_tex(job_dir: str, spec: dict, city_st: str, template_tex: str |
     lines += [r"\end{itemize}", r"\section*{Skills}", r"\begin{itemize}"]
     for r in spec["skills"]:
         lines.append(rf"\item \textbf{{{esc(r['category'])}:}} {esc(r['items'])}")
-    lines += [r"\end{itemize}", r"\section*{Experience — Mondee}", r"\begin{itemize}"]
+    lines += [r"\end{itemize}", r"\section*{Experience - Mondee}", r"\begin{itemize}"]
     for b in spec["mondee_bullets"]:
         lines.append(rf"\item {esc(b)}")
-    lines += [r"\end{itemize}", r"\section*{Experience — Cosmic Reality}", r"\begin{itemize}"]
+    lines += [r"\end{itemize}", r"\section*{Experience - Cosmic Reality}", r"\begin{itemize}"]
     for b in spec["cosmic_bullets"]:
         lines.append(rf"\item {esc(b)}")
     lines.append(r"\end{itemize}")
@@ -360,7 +360,7 @@ def write_cover_tex(job_dir: str, cl: dict, company: str, title: str, city_st: s
         return path
     body = "\n\n".join(esc(cl.get(k, "")) for k in ("p1", "p2", "p3", "p4"))
     Path(path).write_text(
-        f"% Cover letter for {esc(company)} — {esc(title)}\n"
+        f"% Cover letter for {esc(company)} - {esc(title)}\n"
         f"% Address: {esc(cl.get('addr') or city_st)}\n\n{body}\n",
         encoding="utf-8",
     )
@@ -392,7 +392,7 @@ def compile_tex(cwd: str, engine: str, tex: str) -> tuple[bool, str]:
 def build_job(job_dir: str, spec: dict, cl: dict, city_st: str, company: str, title: str,
               resume_template: str | None = None, cover_template: str | None = None,
               require_pdf: bool = True) -> dict:
-    """Validate → write tex → compile to PDF. Fails clearly if LaTeX missing."""
+    """Validate -> write tex -> compile to PDF. Fails clearly if LaTeX missing."""
     spec = normalize(spec)
     errs = validate(spec, city_st)
     if errs:
@@ -442,7 +442,7 @@ def build_job(job_dir: str, spec: dict, cl: dict, city_st: str, company: str, ti
         notes.append(f"resume pages={pages(dst)}")
     else:
         compile_errors.append(f"xelatex failed on main.tex: {err_res[:400]}")
-        notes.append("xelatex failed — resume PDF not produced")
+        notes.append("xelatex failed - resume PDF not produced")
 
     ok_cl, err_cl = compile_tex(job_dir, pdl, "coverletter.tex")
     if ok_cl:
@@ -453,7 +453,7 @@ def build_job(job_dir: str, spec: dict, cl: dict, city_st: str, company: str, ti
         notes.append(f"cover pages={pages(dst)}")
     else:
         compile_errors.append(f"pdflatex failed on coverletter.tex: {err_cl[:400]}")
-        notes.append("pdflatex failed — cover PDF not produced")
+        notes.append("pdflatex failed - cover PDF not produced")
 
     compiled = bool(resume_pdf and cover_pdf and os.path.isfile(resume_pdf) and os.path.isfile(cover_pdf))
     if not compiled and require_pdf:

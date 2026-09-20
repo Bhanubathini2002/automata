@@ -1,5 +1,5 @@
 """
-Gmail OTP helper — real enough to run.
+Gmail OTP helper - real enough to run.
 
 Primary path: IMAP search for a recent 6-digit code (app password / account password
 from env). Fallback stub returns None so apply can mark needs_human instead of crashing.
@@ -43,7 +43,7 @@ class GmailOTPHelper:
     ) -> Optional[str]:
         """
         Poll IMAP INBOX for a 6-digit OTP. Returns the code or None.
-        Never raises on auth/network failure — returns None so the apply loop can skip.
+        Never raises on auth/network failure - returns None so the apply loop can skip.
         """
         if not self.configured:
             return None
@@ -128,7 +128,7 @@ class GmailOTPHelper:
         """
         Optional: read OTP from an already-open Gmail tab (mail.google.com/mail/u/N/).
         Tries u/0..u/2 until page title matches expected_account.
-        Does not click mail rows — reads tr.zA preview text (COMPLETE_WORKFLOW §10).
+        Does not click mail rows - reads tr.zA preview text (COMPLETE_WORKFLOW §10).
         """
         expected = (expected_account or self.address or "").lower()
         try:

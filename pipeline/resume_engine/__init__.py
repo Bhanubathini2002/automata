@@ -1,4 +1,4 @@
-"""LaTeX resume + cover letter tailor engine (LLM JSON → validate → compile hooks)."""
+"""LaTeX resume + cover letter tailor engine (LLM JSON -> validate -> compile hooks)."""
 
 from .prompts import SYSTEM_RESUME, SYSTEM_CL, build_messages, build_cl_messages, repair_messages
 from .tailor import tailor_job, run_batch

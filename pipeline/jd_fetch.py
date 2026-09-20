@@ -1,7 +1,7 @@
 """
-Stage 3 — JD fetch: split batches, fetch URLs (best-effort), merge into Excel + job.json.
+Stage 3 - JD fetch: split batches, fetch URLs (best-effort), merge into Excel + job.json.
 
-Fetch uses urllib + basic HTML→text distillation. CapSolver/browser not required here.
+Fetch uses urllib + basic HTML->text distillation. CapSolver/browser not required here.
 Failed URLs are marked FETCH_FAILED so the resume stage can still proceed with search.
 """
 from __future__ import annotations
@@ -138,7 +138,7 @@ def cmd_fetch(root: Path, day: str, batch_idx: int | None = None, force: bool = 
     if batch_idx is not None:
         ins = [p for p in ins if p.name == f"in_{batch_idx}.json"]
     if not ins:
-        sys.exit(f"no in_*.json in {bdir} — run split first")
+        sys.exit(f"no in_*.json in {bdir} - run split first")
     total = ok = fail = skipped = 0
     for inp in ins:
         outp = bdir / inp.name.replace("in_", "out_")

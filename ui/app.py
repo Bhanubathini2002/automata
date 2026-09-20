@@ -43,7 +43,7 @@ with st.expander("Workflow overview", expanded=True):
         """
     )
 
-tab_setup, tab_run, tab_status = st.tabs(["Setup wizard", "Run dashboard", "Config status"])
+tab_setup, tab_run, tab_watch, tab_status = st.tabs(["Setup wizard", "Run dashboard", "Now running", "Config status"])
 
 # Always reload last saved values from disk
 if "cfg_tick" not in st.session_state:
@@ -321,6 +321,26 @@ with tab_run:
         "streamlit run ui/app.py",
         language="bash",
     )
+
+
+with tab_watch:
+    st.subheader("Now running")
+    st.caption("Which job apply is on right now. No screenshots.")
+    if st.button("Refresh status"):
+        st.rerun()
+    try:
+        from pipeline.apply_tier_a.live_status import read as read_live
+        live = read_live()
+    except Exception as e:
+        live = {"state": "error", "message": str(e)}
+    st.metric("State", str(live.get("state", "?")))
+    st.write("**Company:**", live.get("company") or "—")
+    st.write("**Title:**", live.get("title") or "—")
+    st.write("**Action:**", live.get("action") or "—")
+    st.write("**Status:**", live.get("status") or "—")
+    st.write("**URL:**", live.get("url") or "—")
+    st.write("**Updated:**", live.get("updated_at") or "—")
+
 
 with tab_status:
     st.subheader("Current config (reloaded from disk)")

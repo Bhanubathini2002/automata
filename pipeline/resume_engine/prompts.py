@@ -13,9 +13,9 @@ RULES = """ABSOLUTE RULES
 1. Use ONLY facts, employers, dates, tools and numbers that appear in BASE_RESUME. Never add a technology, tool, certification, employer, degree or metric that is not already there.
 2. If the job asks for something BASE_RESUME does not have (example: Kotlin, Adobe, TensorRT, Rust, SAS), do NOT mention it anywhere.
 3. Keep every number from BASE_RESUME exactly (35%, 40%, 60%, 30+). Do not invent new percentages.
-4. Reword, reorder, shorten, emphasize — that is your whole job. Put the technologies the job description repeats most FIRST.
+4. Reword, reorder, shorten, emphasize - that is your whole job. Put the technologies the job description repeats most FIRST.
 5. Order matters: MOST job-relevant items FIRST in every list. The last items may be deleted automatically to fit the page.
-6. Seniority: entry/junior job → plain builder verbs (built, shipped, implemented). Senior/staff/lead → ownership verbs are fine (owned, led, architected).
+6. Seniority: entry/junior job -> plain builder verbs (built, shipped, implemented). Senior/staff/lead -> ownership verbs are fine (owned, led, architected).
 7. Plain text only. No LaTeX, no backslashes, no markdown, no bullet symbols, no emojis. Normal characters (&, %, #) are fine.
 8. Output ONLY a valid JSON object. No prose before or after. No markdown fences."""
 
@@ -67,7 +67,7 @@ def build_messages(jd, company, title, city_st, level, base_spec=None):
         _job_block(jd, company, title, city_st, level)
         + "\nBASE_RESUME (the only allowed source of facts)\n"
         + json.dumps(base, ensure_ascii=False, indent=0)
-        + "\n\nOUTPUT_SCHEMA — every key is required\n"
+        + "\n\nOUTPUT_SCHEMA - every key is required\n"
         + json.dumps(RESUME_SCHEMA, ensure_ascii=False, indent=0)
         + "\n\nREQUIRED COUNTS\n"
         + RESUME_COUNTS
@@ -87,7 +87,7 @@ def build_cl_messages(jd, company, title, city_st, level, base_spec=None):
         _job_block(jd, company, title, city_st, level)
         + "\nBASE_RESUME (the only allowed source of facts)\n"
         + json.dumps(facts, ensure_ascii=False, indent=0)
-        + "\n\nOUTPUT_SCHEMA — every key is required, respect the word counts\n"
+        + "\n\nOUTPUT_SCHEMA - every key is required, respect the word counts\n"
         + json.dumps(CL_SCHEMA, ensure_ascii=False, indent=0)
         + "\n\nReturn the JSON object now."
     )

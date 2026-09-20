@@ -46,3 +46,14 @@ _refs/
 BUILD_PROMPT.md
 claude-build.log
 *.tgz
+
+data/applications/live/
+
+
+patch_*.py
+fix_*.py
+strip_*.py
+pipeline/data/
+data/applications/
+*.log
+

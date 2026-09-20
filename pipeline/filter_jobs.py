@@ -1,5 +1,5 @@
 """
-Stage 2 — filter / sort / split jobs Excel by role family.
+Stage 2 - filter / sort / split jobs Excel by role family.
 
 Ported from job-hunt/filter/process_jobs.py (generic paths + config).
 """

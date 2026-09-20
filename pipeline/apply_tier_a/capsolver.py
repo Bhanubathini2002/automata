@@ -1,4 +1,4 @@
-"""CapSolver client — reCaptchaV2 / V3 / Cloudflare Turnstile only (no hCaptcha)."""
+"""CapSolver client - reCaptchaV2 / V3 / Cloudflare Turnstile only (no hCaptcha)."""
 from __future__ import annotations
 
 import os

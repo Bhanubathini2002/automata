@@ -1,5 +1,5 @@
 """
-Stage 3 prep — match job locations to an address book, stage job folders.
+Stage 3 prep - match job locations to an address book, stage job folders.
 
 Ported from resume/scripts/pipeline_setup.py (paths via config / data/).
 """
@@ -128,7 +128,7 @@ def run_setup(
     redo: bool = False,
 ) -> dict[str, Any]:
     """
-    File Excel → add address/resume/jd/cover columns → stage per-job folders.
+    File Excel -> add address/resume/jd/cover columns -> stage per-job folders.
     """
     root_p = Path(root) if root else ROOT / "data"
     day = parse_day(xlsx, day)

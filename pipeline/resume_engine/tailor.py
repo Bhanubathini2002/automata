@@ -1,4 +1,4 @@
-"""LLM tailor driver: 2 calls/job → JSON → validate → render hooks."""
+"""LLM tailor driver: 2 calls/job -> JSON -> validate -> render hooks."""
 from __future__ import annotations
 
 import concurrent.futures as cf
@@ -64,11 +64,34 @@ def extract_json(text: str):
     m = re.search(r"\{.*\}", t, re.S)
     if m:
         t = m.group(0)
+    t = (t.replace("\u201c", '"').replace("\u201d", '"')
+           .replace("\u2018", "'").replace("\u2019", "'")
+           .replace("“", '"').replace("”", '"')
+           .replace("‘", "'").replace("’", "'"))
     t = re.sub(r",\s*([}\]])", r"\1", t)
-    return json.loads(t)
+    t = re.sub(r"\bNaN\b", "null", t)
+    t = re.sub(r"\bInfinity\b", "null", t)
+    try:
+        return json.loads(t)
+    except json.JSONDecodeError:
+        t2 = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", t)
+        t2 = re.sub(r",\s*([}\]])", r"\1", t2)
+        try:
+            return json.loads(t2)
+        except json.JSONDecodeError:
+            t3 = re.sub(r"([\{,]\s*)([A-Za-z_][A-Za-z0-9_]*)\s*:", r'\1"\2":', t2)
+            t3 = re.sub(r",\s*([}\]])", r"\1", t3)
+            try:
+                return json.loads(t3)
+            except json.JSONDecodeError:
+                try:
+                    from json_repair import repair_json
+                    return json.loads(repair_json(t))
+                except Exception:
+                    raise
 
 
-def _llm_json(args, msgs, system, validate_fn, max_tries=3):
+def _llm_json(args, msgs, system, validate_fn, max_tries=5):
     raw, errors = "", []
     for _ in range(max_tries):
         try:
@@ -235,6 +258,8 @@ def run_batch(
                 fail += 1
             tag = "cached" if r.get("cached") else ("OK" if r.get("ok") else "FAIL")
             print(f"[{done + fail:>3}/{len(jobs)}] {str(r.get('folder', ''))[:50]:<50} {tag}")
+            if not r.get("ok"):
+                print("       ", r.get("stage"), (r.get("errors") or r.get("error") or "")[:500])
 
     excel_n = 0
     if write_excel:
@@ -280,7 +305,7 @@ def _write_excel_paths(upd: Path, jobs: list[str]) -> int:
                 continue
             except Exception:
                 pass
-        # Do NOT write .tex paths as if PDFs exist — LaTeX compile is required
+        # Do NOT write .tex paths as if PDFs exist - LaTeX compile is required
     try:
         wb.save(cand[0])
     except PermissionError:
